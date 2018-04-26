@@ -1,5 +1,6 @@
 # PedreTV
 sudo systemctl disable nodm
+apt-get install mpv
 apt-get install python-dev
 git clone "https://github.com/duxingkei33/orangepi_PC_gpio_pyH3.git"
 orangepi_PC_gpio_pyH3/
