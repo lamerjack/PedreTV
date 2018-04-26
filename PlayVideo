@@ -1,0 +1,2 @@
+#!/bin/sh
+startx /usr/bin/mpv --vo=vdpau --hwdec=vdpau -fs --loop=inf "/home/lab1/PedreTV/videos"
