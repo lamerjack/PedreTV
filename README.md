@@ -1,4 +1,7 @@
 # PedreTV
+Installare Armbian
+Cambiare la pw di root
+Creare un nuovo utente (lab1) e loggarsi con quello
 sudo systemctl disable nodm
 apt-get install mpv
 apt-get install python-dev
