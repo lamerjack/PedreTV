@@ -5,4 +5,4 @@ sudo apt-get install samba
 cd orangepi_PC_gpio_pyH3/
 sudo python setup.py install
 cd ..
-
+mkdir videos
