@@ -13,7 +13,10 @@ sed -i "s/$(cat /etc/hostname)/$nomeunita/g" /etc/hostname
 sed -i "s/$(cat /etc/hostname)/$nomeunita/g" /etc/hostname
 
 systemctl disable nodm
-apt-get install mpv python-dev samba
+apt-get install mpv python-dev samba acpid
+sh -c "echo event=button/power > /etc/acpi/events/button_power"
+sh -c "echo action=/sbin/reboot >> /etc/acpi/events/button_power"
+
 mkdir videos
 net usershare add videos /home/lab1/PedreTV/videos/ rutto libero everyone:F guest_ok=y
 chmod 777 videos
@@ -23,4 +26,4 @@ python setup.py install
 cd ..
 perl -i -e '$/=undef; $_=<>; s/\n\n/\n\/home\/lab1\/PedreTV\/init.sh\n/; print $_' /etc/rc.local
 
-apt upgrade
+apt -y upgrade
