@@ -1,4 +1,5 @@
 #!/bin/bash
+BASEDIR=$(dirname "$0")
 if [ "$(id -u)" != "0" ]; then
 echo "non sei root"
 exit 1
