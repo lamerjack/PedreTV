@@ -31,3 +31,5 @@ cd ..
 perl -i -e '$/=undef; $_=<>; s/\n\n/\n\/home\/lab1\/PedreTV\/init.sh\n/; print $_' /etc/rc.local
 
 apt -y upgrade
+
+echo "Copiare i files nella cartella \\$nomeunita\videos e riavviare"
