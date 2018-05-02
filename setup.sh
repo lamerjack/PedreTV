@@ -13,7 +13,7 @@ sed -i "s/$(cat /etc/hostname)/$nomeunita/g" /etc/hostname
 sed -i "s/$(cat /etc/hostname)/$nomeunita/g" /etc/hostname
 
 systemctl disable nodm
-apt-get install mpv python-dev samba acpid
+apt-get -y install mpv python-dev samba acpid
 sh -c "echo event=button/power > /etc/acpi/events/button_power"
 sh -c "echo action=/sbin/reboot >> /etc/acpi/events/button_power"
 
