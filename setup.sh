@@ -17,6 +17,7 @@ apt-get -qq -y remove --purge chromium* gnome-icon-theme hexchat* humanity-icon-
 apt-get clean
 apt-get -y -qq autoremove
 
+apt-get update
 apt-get -y install mpv python-dev samba acpid
 sh -c "echo event=button/power > /etc/acpi/events/button_power"
 sh -c "echo action=/sbin/reboot >> /etc/acpi/events/button_power"
