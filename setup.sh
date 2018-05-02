@@ -21,6 +21,6 @@ git clone "https://github.com/duxingkei33/orangepi_PC_gpio_pyH3.git"
 cd orangepi_PC_gpio_pyH3/
 python setup.py install
 cd ..
-perl -i -e '$/=undef; $_=<>; s/\n\n/\n\/etc\/rc.local \/home\/lab1\/PedreTV\/init.sh\n/; print $_' /etc/rc.local
+perl -i -e '$/=undef; $_=<>; s/\n\n/\n\/home\/lab1\/PedreTV\/init.sh\n/; print $_' /etc/rc.local
 
 apt upgrade
