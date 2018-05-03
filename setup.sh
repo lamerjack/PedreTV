@@ -1,5 +1,6 @@
 #!/bin/bash
 BASEDIR=$(dirname "$0")
+IP=$(ip route get 1 | awk '{print $NF;exit}')
 if [ "$(id -u)" != "0" ]; then
 echo "non sei root"
 exit 1
@@ -34,4 +35,4 @@ perl -i -e '$/=undef; $_=<>; s/\n\n/\n\/home\/lab1\/PedreTV\/init.sh\n/; print $
 
 apt -y upgrade
 
-echo "Copiare i files nella cartella \\$nomeunita\videos e riavviare"
+echo "Copiare i files nella cartella \\\\$IP\\videos e riavviare"
