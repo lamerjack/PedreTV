@@ -14,7 +14,11 @@ echo "unita' rinominata in: $nomeunita"
 sed -i "s/$(cat /etc/hostname)/$nomeunita/g" /etc/hostname
 sed -i "s/$(cat /etc/hostname)/$nomeunita/g" /etc/hostname
 
+echo "Disabling nodm"
 systemctl disable nodm
+echo "Disabling lightdm"
+systemctl disable lightdn
+
 apt-get -qq -y remove --purge chromium* gnome-icon-theme hexchat* humanity-icon-theme imagemagick* libreoffice* mirage orage ntfs-3g thunderbird
 apt-get clean
 apt-get -y -qq autoremove
